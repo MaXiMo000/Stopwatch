@@ -1,0 +1,116 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.stopwatch-container{
+  display: flex;
+  flex-flow: column wrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+
+  border: 2px solid rgb(13, 13, 13);
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px rgb(73, 69, 69);
+}
+
+.stopwatch-container:hover{
+  animation: bordermove 4s infinite;
+}
+
+@keyframes bordermove{
+  0%{
+    box-shadow:4px 4px 4px rgb(73, 69, 69);
+  }
+  25%{
+    box-shadow:0 4px 4px 4px rgb(73, 69, 69);
+  }
+  50%{
+    box-shadow:4px 0 4px 4px rgb(73, 69, 69);
+  }
+  75%{
+    box-shadow:4px 4px 0 4px rgb(73, 69, 69);
+  }
+  100%{
+    box-shadow:4px 4px 4px rgb(73, 69, 69);
+  }
+}
+
+.heading{
+  font-size: 4rem;
+}
+
+.time{
+  font-size: 3rem;
+}
+
+.button-container{
+  display: flex;
+  gap: 10px;
+}
+
+.button-container button{
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 4px;
+  border-radius: 8px;
+  color: white;
+}
+
+
+.button-container button:hover{
+  transition: all 0.8s;
+  transform: translateY(-2px) scale(1.1);
+  background-color: white;
+}
+
+.start{
+  background-color: green;
+  border-color: green;
+}
+
+.start:hover{
+  color: green;
+}
+
+.stop{
+  background-color: red;
+  border-color: red;
+}
+
+.stop:hover{
+  color: red;
+}
+
+.reset{
+  background-color: blue;
+  border-color: blue;
+}
+
+.reset:hover{
+  color: blue;
+}
+
+@media screen and (max-width:500px) {
+  .stopwatch-container{
+    padding: 14px;
+  }
+
+  .heading{
+    font-size: 3.5rem;
+  }
+  
+  .time{
+    font-size: 2.8rem;
+  }
+
+  .button-container button{
+    font-size: 1.2rem;
+  }
+}
